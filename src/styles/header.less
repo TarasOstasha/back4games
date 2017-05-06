@@ -1,0 +1,238 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  li {
+    list-style: none;
+  }
+}
+a {
+  text-decoration: none;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  max-width: 1600px;
+  //padding: 0;
+  //margin: 0;
+
+}
+.wrapper {
+  overflow: hidden;
+  max-width: 100%;
+}
+//scropp-up
+a.back-to-top {
+  display: none;
+  width: 60px;
+  height: 60px;
+  text-indent: -9999px;
+  position: fixed;
+  z-index: 999;
+  right: 20px;
+  bottom: 20px;
+  //background-image: url("../images/btn-top1.png");
+  background-size: contain;
+  border-radius: 10px;
+  //opacity: 0.3;
+}
+a.back-to-top:hover {
+  //background: rgba(0, 0, 0, 0.1);
+  //background-image: url("../images/btn-top-hover.png");
+  background-size: contain;
+  //opacity: 0.3;
+}
+
+//**btn up**//
+a.back-to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //display: none;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  text-indent: -9999px;
+  position: fixed;
+  //z-index: 999;
+  text-indent: 0;
+  right: 20px;
+  bottom: 20px;
+  //background-image: url("../images/btn-top1.png");
+  background-size: contain;
+  border-radius: 30px;
+  background: transparent;
+  //opacity: 0.3;
+  border: 1px solid;
+  border-color: #b9a260;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+a.back-to-top:hover {
+  background: #b9a260;
+  //background-image: url("../images/btn-top-hover.png");
+  background-size: contain;
+  //opacity: 0.3;
+  .fa-long-arrow-up {
+    color: #fff;
+  }
+}
+.fa-long-arrow-up {
+  font-size: 25px;
+  color: #b9a260;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  vertical-align: middle;
+  display: inline-block;
+}
+//**end btn up**//
+
+//**стили для хедеp топ**//
+.header__top {
+  background: @header_topBackground;
+  min-height: 150px;
+  height: 100%;
+}
+.container__top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  .text-logo {
+    color: @header_fontColor;
+    font-family: 'pfdintextcondpro-thin';
+    font-size: 80px;
+    text-transform: uppercase;
+    letter-spacing: -5px;
+  }
+  .logo-wrapper {
+    margin-right: 15px;
+  }
+}
+.social-header {
+  display: flex;
+  align-items: center;
+  color: @header_fontColor;
+  font-family: 'LatoBold';
+  font-size: 18px;
+  ul {
+    display: flex;
+    li {
+      margin: 0 5px;
+    }
+    li a {
+      color: @header_fontColor;
+    }
+    li a:hover {
+      color: #eb5937;
+    }
+  }
+}
+.pay {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 10px;
+  color: @header_fontColor;
+  li {
+    margin: 15px 0;
+    a {
+      color: @header_fontColor;
+    }
+  }
+  &:after {
+    width: 1px;
+    height: 100%;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    background: #403d3c;
+  }
+}
+//**стили для хедер боттом**//
+.header__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  background: @background_headerbottom;
+}
+.header__bottom-section {
+  display: flex;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  li {
+    border-left: 1px solid #403d3c;
+    padding: 25px 10px;;
+    display: flex;
+    align-items: center;
+    a {
+      color: @header_fontColor;
+      text-decoration: none;
+      font-family: 'LatoRegular';
+      font-size: 14px;
+    }
+  }
+  li:last-child {
+    border-right: 1px solid #403d3c;
+  }
+  li:hover {
+    background: @header_navmenu--hover;
+    a {
+      color: @background_headerbottom;
+    }
+  }
+}
+.search {
+  margin-left: 6%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 250px;
+  input::-moz-placeholder { color: #f3f3f3; }
+  input::-webkit-input-placeholder { color: #f3f3f3; }
+  input {
+    border-radius: 0;
+    background: transparent;
+  }
+  .form-control:focus {
+    border-color: #f3f3f3;
+    outline: 0;
+    box-shadow: none;
+  }
+  span {
+    border-radius: 0;
+    height: 34px;
+    width: 40px;
+  }
+  i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: @background_headerbottom;
+  }
+}
+.search:hover {
+  background: transparent;
+}
+
+
+
+
+
+
+

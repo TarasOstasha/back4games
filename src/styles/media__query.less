@@ -1,0 +1,139 @@
+//for telephone//
+@media only  screen and (max-width: 767px) {
+//**index.html**//
+// menu //
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  .slideout-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    width: 256px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    display: none;
+  }
+
+  .slideout-panel {
+    position: relative;
+    z-index: 1;
+    will-change: transform;
+  }
+
+  .slideout-open,
+  .slideout-open body,
+  .slideout-open .slideout-panel {
+    overflow: hidden;
+  }
+
+  .slideout-open .slideout-menu {
+    display: block;
+  }
+  .btn--open-mobile {
+    background: rgba(0,0,0,.8);
+    color: #FFFFFF;
+    border-color: rgba(0,0,0,.8);
+    height: 50px;
+    width: 50px;
+  }
+  .navigate__header li {
+    display: block;
+    margin: 20px 0;
+    a {
+      text-align: center;
+    }
+  }
+  .panel--header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    img {
+      width: 100%;
+      padding: 0 5px;
+    }
+  }
+  .h1-class {
+    top: 29%!important;
+  }
+  .text-slider-slide-2 {
+    left: 10%!important;
+    //top:0!important;
+    .h1-class-slide2 {
+      font-size: 50px;
+      line-height: .8;
+      margin: 0;
+    }
+    .h1-class2-slide2 {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1;
+    }
+    .portfolio-btn {
+      margin: 5px;
+    }
+  }
+  .text-slider-slide-4 {
+    top: 30%!important;
+    left: 50px!important;
+    .h1-class-slide4 {
+      font-size: 50px;
+      line-height: .8;
+      margin: 0;
+    }
+    .btn-slider-4 {
+      //margin: 2px;
+    }
+  }
+
+  .h1-class,
+  .h1-class2,
+  .h1-class3 {
+    font-size: 60px!important;
+  }
+  .header-logo--mobile {
+    line-height: 50px;
+    img {
+      width: 100%;
+      padding: 0 5px;
+    }
+  }
+
+  .team {
+    background-size: cover!important;
+  }
+  //**tab settings**//
+  .pws_responsive_small_menu {
+    a {
+      padding: 0!important;
+    }
+  }
+  .pws_tabs_container.pws_tabs_responsive .pws_responsive_small_menu {
+    background: #b69e59;
+  }
+  .pws_tabs_container.pws_tabs_responsive .pws_responsive_small_menu a:hover {
+    background: #b69e59;
+  }
+  .pws_tabs_container.pws_tabs_responsive ul.pws_tabs_controll li a {
+    line-height: 40px;
+  }
+
+  .sale span {
+    padding: 0!important;
+  }
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .form--section {
+    background-attachment: scroll;
+  }
+}
+
+
