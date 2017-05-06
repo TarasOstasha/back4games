@@ -93,7 +93,8 @@ gulp.task('bower-js', function() {
 		"src/bower/mislider-master/dist/js/mislider.min.js",
         "src/bower/bxslider-4/dist/jquery.bxslider.min.js",
         "src/bower/jquery.easing/js/jquery.easing.js",
-		"src/bower/jquery.easing/js/jquery.easing.compatibility.js"
+		"src/bower/jquery.easing/js/jquery.easing.compatibility.js",
+		"src/bower/slider-top/carouFredSel-jQuery/jquery.carouFredSel-6.2.1-packed.js"
 
 	])
 	.pipe(addSrc.prepend("src/bower/jquery/dist/jquery.js"))

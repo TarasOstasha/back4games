@@ -23,7 +23,7 @@ p {
   //margin: 0;
 
 }
-.wrapper {
+.main--wrapper {
   overflow: hidden;
   max-width: 100%;
 }
@@ -148,7 +148,14 @@ a.back-to-top:hover {
     margin: 15px 0;
     a {
       color: @header_fontColor;
+      text-decoration: none;
     }
+    a:hover {
+      color: @background_headerbottom;
+    }
+  }
+  li:hover {
+    color: @background_headerbottom;
   }
   &:after {
     width: 1px;
@@ -218,11 +225,11 @@ a.back-to-top:hover {
     border-radius: 0;
     height: 34px;
     width: 40px;
-  }
-  i {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  i {
     color: @background_headerbottom;
   }
 }
