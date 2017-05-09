@@ -1,0 +1,162 @@
+//#carousel {
+//  width:800px;
+//  height: 300px;
+//  display: relative;
+//  margin: 96px 0 128px;
+//}
+//#carousel img {
+//  display: hidden; /* hide images until carousel prepares them */
+//  cursor: pointer; /* not needed if you wrap carousel items in links */
+//}
+//.h2-title {
+//  .h2();
+//}
+//.cover {
+//  position: relative;
+//
+//}
+//.title-slide {
+//  position: absolute;
+//  top:0;
+//}
+.slider {
+  margin-bottom: 130px;
+}
+.flipster__container {
+  //transform: translateX(0)!important;
+}
+.h2-title {
+  color: @header_fontColor;
+  text-transform: uppercase;
+  font-family: 'LatoBold';
+  font-size: 20px;
+  text-align: center;
+  margin: 20px 0 62px;
+}
+.info__slide {
+  //padding: 55px 0;
+  border-left: 1px solid #403d3c;
+  position: absolute;
+  top: 70px;
+  right: 0;
+}
+.sale {
+  span {
+    position: absolute;
+    z-index: 2;
+    font-size: 25px;
+    color: #f3f3f3;
+    font-family: 'Lato-HairlineItalic';
+    font-weight: bold;
+    padding-left: 10px;
+  }
+  img {
+    position: relative;
+  }
+}
+.title-slide {
+  color: #f3f3f3;
+  font-family: 'LatoBold';
+  font-size: 25px;
+}
+.link--infoSlide {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  li {
+    margin: 0 4px;
+  }
+  li:nth-child(2) {
+    border-left: 1px solid;
+    border-right: 1px solid;
+    padding:  2px;
+    border-color: @dropdown_hover;
+  }
+  li a {
+    color: @dropdown_hover;
+    text-decoration: none;
+    font-family: 'LatoRegular';
+    font-size: 14px;
+  }
+}
+.list-info p {
+  color: #f3f3f3;
+  font-size: 14px;
+  font-family: 'LatoRegular';
+  line-height: 2;
+}
+.total-price {
+  font-size: 32px;
+  color: @header_fontColor;
+  font-family: 'Lato-Heavy';
+  display: inline-block;
+  vertical-align: middle;
+}
+.by__now-slideinfo {
+  display: inline-block;
+  margin: 35px 35px 35px 0;
+}
+.offer-container {
+  padding-left: 45px;
+}
+
+.my-flipster {
+  position: relative;
+  left: -190px;
+}
+.flipster__nav {
+  position: absolute;
+  right: 0;
+}
+.active-title {
+  display: none;
+  padding: 25px 35px;
+  background: @dropdown_hover;
+  font-size: 20px;
+  font-family: 'LatoBold';
+  color: #f3f3f3;
+  position: absolute;
+  bottom: 10%;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  box-shadow: inset rgba(0,0,0,.8) 0 0 20px, inset #eb5937 0 50px 100px;
+}
+.hot-offers-item.active .active-title {
+  display: block;
+}
+.active-title:before, .active-title:after
+{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-color: transparent;
+  bottom: -10px;
+}
+
+.active-title:before
+{
+  border-width: 0 9px 10px 0;
+  border-right-color: #222;
+  left: 0;
+}
+
+.active-title:after
+{
+  border-width: 0 0 10px 7px;
+  border-left-color: #eb5937;
+  right: 0;
+}
+.flipster__item__content img {
+  position: relative;
+}
+
+
+
+.canvas-section {
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  right: 0;
+  top: 0%;
+}

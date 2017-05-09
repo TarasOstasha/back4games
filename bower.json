@@ -21,7 +21,8 @@
     "toastr": "^2.1.2",
     "components-font-awesome": "^4.7.0",
     "slick-carousel": "^1.6.0",
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
+    "chart.js": "^2.5.0"
   },
   "devDependencies": {
     "bxslider-4": "^4.2.12"

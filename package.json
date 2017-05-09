@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "debug": "^2.6.3",
-    "lazy-debug": "^0.3.0"
+    "lazy-debug": "^0.3.0",
+    "vue-carousel-3d": "^0.1.8"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.1",

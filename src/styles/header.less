@@ -19,6 +19,7 @@ p {
 }
 .container {
   max-width: 1600px;
+  width: 100%;
   //padding: 0;
   //margin: 0;
 
@@ -26,6 +27,7 @@ p {
 .main--wrapper {
   overflow: hidden;
   max-width: 100%;
+  background: #1c1919;
 }
 //scropp-up
 a.back-to-top {
@@ -127,6 +129,7 @@ a.back-to-top:hover {
   font-size: 18px;
   ul {
     display: flex;
+    margin-left: 25px;
     li {
       margin: 0 5px;
     }
@@ -137,6 +140,9 @@ a.back-to-top:hover {
       color: #eb5937;
     }
   }
+}
+.pay__wrapper li  i {
+  width: 15px;
 }
 .pay {
   display: flex;
@@ -149,6 +155,8 @@ a.back-to-top:hover {
     a {
       color: @header_fontColor;
       text-decoration: none;
+      font-family: 'LatoRegular';
+      font-size: 14px;
     }
     a:hover {
       color: @background_headerbottom;
@@ -166,6 +174,9 @@ a.back-to-top:hover {
     left: 0;
     background: #403d3c;
   }
+  .dropdown-toggle i {
+    width: 15px;
+  }
 }
 //**стили для хедер боттом**//
 .header__bottom {
@@ -175,6 +186,7 @@ a.back-to-top:hover {
 }
 .header__bottom-section {
   display: flex;
+  justify-content: space-between;
 }
 .nav-menu {
   display: flex;
@@ -184,7 +196,7 @@ a.back-to-top:hover {
 
   li {
     border-left: 1px solid #403d3c;
-    padding: 25px 10px;;
+    padding: 25px 25px;;
     display: flex;
     align-items: center;
     a {
@@ -205,11 +217,11 @@ a.back-to-top:hover {
   }
 }
 .search {
-  margin-left: 6%;
+  //margin-left: 10%;
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 250px;
+  max-width: 350px;
   input::-moz-placeholder { color: #f3f3f3; }
   input::-webkit-input-placeholder { color: #f3f3f3; }
   input {

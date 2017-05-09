@@ -8,16 +8,15 @@ $(document).ready(function(){
             $('a.back-to-top').fadeOut('slow');
         }
     });
-
+    //
     $('a.back-to-top').click(function() {
 	    $('html,body').animate({
 	        scrollTop: 0
 	    }, 1000);
     		return false;
-	});
+    });
 
-
-    //**transition download page**//
+    // //**transition download page**//
     $("body").css("display", "none");
     $("body").fadeIn(2000);
     $("a.transition").click(function(event){
@@ -28,10 +27,9 @@ $(document).ready(function(){
     function redirectPage() {
         window.location = linkLocation;
     }
-    //**download page transition end**//
+    // //**download page transition end**//
 
-
-    //**slider top**//
+    // //**slider top**//
     $(function() {
         $('#slider').carouFredSel({
             width: '100%',
@@ -119,9 +117,313 @@ $(document).ready(function(){
         });
 
     });
+
+    //**filter list**//
+    // $("#myList").listnav({
+    //     //currently letter start//
+    //     initLetter: 'a',
+    //     //false to show all elements//
+    //     includeAll: false,
+    //     //disabled when no element//
+    //     flagDisabled: true,
+    //     //delete search to number//
+    //     includeNums:false
+    // });
+
+    var data = [
+        {
+            title: "RainbowSix: Siege",
+            saleInfo: "-25% offer",
+            languages: ["en", "ru"],
+            categories: ["Action","Multy-palyer","Shooter"],
+            platform: ["windows"],
+            activation: ["/images/main/steam.png","images/main/ulpay.png"],
+            publisher: ["ubisoft"],
+            release_data: ["2015"],
+            imageUrl: "images/main/slider2-img1.png",
+            totalPrice: 25.99,
+            id: 1,
+            offerEstimateDate: "11/05/2017T14:00Z"
+        },
+        {
+            title: "Call off Duty",
+            saleInfo: "-15% offer",
+            languages: ["en", "ru"],
+            categories: ["Action","Multy-palyer","Shooter"],
+            platform: ["windows"],
+            activation: ["/images/main/steam.png","images/main/ulpay.png"],
+            publisher: ["ubisoft"],
+            release_data: ["2016"],
+            imageUrl: "images/main/slider2-img1.png",
+            totalPrice: 25.99,
+            id: 2,
+            offerEstimateDate: "11/05/2017T14:00Z"
+        },
+        {
+            title: "RainbowSix: Siege",
+            saleInfo: "-40% offer",
+            languages: ["en", "ru"],
+            categories: ["Action","Multy-palyer","Shooter"],
+            platform: ["windows"],
+            activation: ["/images/main/steam.png","images/main/ulpay.png"],
+            publisher: ["ubisoft"],
+            release_data: ["2019"],
+            imageUrl: "images/main/slider2-img1.png",
+            totalPrice: 44.99,
+            id: 3,
+            offerEstimateDate: "11/05/2017T14:00Z"
+        },
+        {
+            title: "RainbowSix: Siege",
+            saleInfo: "-10% offer",
+            languages: ["en", "ru"],
+            categories: ["Multy-palyer","Shooter"],
+            platform: ["windows"],
+            activation: ["/images/main/steam.png","images/main/ulpay.png"],
+            publisher: ["ubisoft"],
+            release_data: ["2014"],
+            imageUrl: "images/main/slider2-img1.png",
+            totalPrice: 35.99,
+            id: 4,
+            offerEstimateDate: "11/05/2017T14:00Z"
+        },
+        {
+            title: "RainbowSix: Siege",
+            saleInfo: "-90% offer",
+            languages: ["en", "ru"],
+            categories: ["Action","Multy-palyer"],
+            platform: ["windows"],
+            activation: ["/images/main/steam.png","images/main/ulpay.png"],
+            publisher: ["ubisoft","eagames"],
+            release_data: ["2010"],
+            imageUrl: "images/main/slider2-img1.png",
+            totalPrice: 55.99,
+            id: 5,
+            offerEstimateDate: "11/05/2017T14:00Z"
+        },
+        {
+            title: "RainbowSix: Siege",
+            saleInfo: "-40% offer",
+            languages: ["en", "ru"],
+            categories: ["Action","Multy-palyer"],
+            platform: ["windows"],
+            activation: ["/images/main/steam.png","images/main/ulpay.png"],
+            publisher: ["ubisoft","eagames"],
+            release_data: ["2010"],
+            imageUrl: "images/main/slider2-img1.png",
+            totalPrice: 55.99,
+            id: 5,
+            offerEstimateDate: "11/05/2017T14:00Z"
+        },
+        {
+            title: "RainbowSix: Siege",
+            saleInfo: "-60% offer",
+            languages: ["en", "ru"],
+            categories: ["Action","Multy-palyer"],
+            platform: ["windows"],
+            activation: ["/images/main/steam.png","images/main/ulpay.png"],
+            publisher: ["ubisoft","eagames"],
+            release_data: ["2010"],
+            imageUrl: "images/main/slider2-img1.png",
+            totalPrice: 55.99,
+            id: 5,
+            offerEstimateDate: "11/05/2017T14:00Z"
+        },
+        {
+            title: "RainbowSix: Siege",
+            saleInfo: "-50% offer",
+            languages: ["en", "ru"],
+            categories: ["Action","Multy-palyer"],
+            platform: ["windows"],
+            activation: ["/images/main/steam.png","images/main/ulpay.png"],
+            publisher: ["ubisoft","eagames"],
+            release_data: ["2010"],
+            imageUrl: "images/main/slider2-img1.png",
+            totalPrice: 55.99,
+            id: 5,
+            offerEstimateDate: "11/05/2017T14:00Z"
+        }
+    ];
+
+    var $flipsterContainer = $("#carousel > ul");
+    $(data).each(function(i, currentDataItem) {
+        /*
+         <div class="active-title active">
+             Spesial offer
+             <span class="time">
+                24:15:75
+             </span>
+         </div>
+         */
+
+        var $li = $("<li>");
+        $li.addClass("hot-offers-item");
+        $li.get(0).__data = currentDataItem;
+        $flipsterContainer.append($li);
+        var specialOfferHtml = '<div class="active-title">\
+            Spesial offer\
+            <span class="time" data-estimate-date="' + currentDataItem.offerEstimateDate + '">\
+                24:15:75\
+            </span>\
+            </div>';
+        $(specialOfferHtml).appendTo($li);
+        $("<img>").attr("src", currentDataItem.imageUrl).appendTo($li);
+    });
+
+    var $title = $("#title");
+    var $saleInfo = $("#saleInfo");
+    var $lenguages = $("#lenguages");
+    var $platform = $("#platform");
+    var $activation = $("#activation");
+    var $publisher = $("#publisher");
+    var $releaseData = $("#release_data");
+    var $totalPrice = $("#totalPrice");
+    var $linkSlide = $("#linkSlide");
+    var $btnByNow = $('#BtnByNow');
+    $btnByNow.click(function () {
+        var id = this.getAttribute('data-id');
+        $.ajax({
+            url: "script.php", //change url add to cart handler
+            method: "POST",
+            data: { id : id },
+            dataType: "json"
+        })
+    });
+    //**slider info**//
+    $(function() {
+        var myFlipster =   $('#carousel').flipster({
+            style: 'carousel',
+            spacing: -0.5,
+            nav: false,
+            itemSelector: 'li',
+            start: 'center',
+            fadeIn: 400,
+            loop: true,
+            autoplay: false,
+            pauseOnHover: true,
+            click: true,
+            keyboard: true,
+            scrollwheel: false,
+            touch: true,
+            onItemSwitch: function(currentItem, previousItem) {
+                // console.dir(currentItem);
+                //$saleInfo.html(JSON.stringify(dataToDisplay));
+
+                load($(currentItem), $(previousItem));
+            }
+        });
+
+
+
+        myFlipster.flipster('jump', 0);
+        var dataMiddleIndex = Math.round(data.length / 2)
+        myFlipster.flipster('jump', dataMiddleIndex);
+
+        myFlipster.flipster('play', 5000); // Set autoplay duration
+        load($($flipsterContainer.children()[dataMiddleIndex]));
+
+
+        function load($el, $prev) {
+            $el.addClass("active");
+            if ($prev && $prev.length) {
+                $prev.removeClass("active");
+            }
+
+            var dataToDisplay = $el.get(0).__data;
+
+            $saleInfo.html(dataToDisplay.saleInfo);
+            $title.html(dataToDisplay.title);
+            $lenguages.html(dataToDisplay.languages.join(","));
+            $platform.html(dataToDisplay.platform.join(","));
+            $publisher.html(dataToDisplay.publisher.join(","));
+            $releaseData.html(dataToDisplay.release_data.join(","));
+            $totalPrice.html(dataToDisplay.totalPrice);
+            $linkSlide.html("");
+            var categories = dataToDisplay.categories;
+            for (var i = 0; i < categories.length; i++) {
+                var currentCategory = categories[i];
+                var li = $("<li>");
+                var a = $("<a href='#'>");
+                a.text(currentCategory);
+                a.appendTo(li);
+                li.appendTo($linkSlide);
+            }
+            var activation = dataToDisplay.activation;
+            $activation.html("");
+            for (var i = 0; i < activation.length; i++) {
+                var currentImg = activation[i];
+                var img = $("<img>");
+                img.attr("src",currentImg);
+                img.appendTo($activation);
+            }
+        }
+    });
+    //**tabslet**//
+    $(function () {
+        $('.tabs').tabslet({
+            mouseevent: 'click',
+            attribute: 'href',
+            animation: true
+        });
+    });
+
+
+    //**chart**//
+    var ctx = $("#myChart");
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        options: {
+            animation:{
+                animateScale:true
+            },
+            responsive: true
+        },
+        // responsive: true,
+        percentageInnerCutout: 10,
+        data: {
+            type: "doughnut",
+            indexLabelPlacement: "outside",
+            datasets: [{
+                backgroundColor: [
+                    "#f3f3f3",
+                    "#1c1919"
+
+                ],
+                hoverBackgroundColor: [
+                    "#eb5937",
+                    "#f3f3f3"
+                ],
+                 data: [85, 15],
+                borderColor: "#1c1919",
+                pointRadius: 10
+
+            }]
+        }
+    });
+
+
 });
 
 
 
 
+
+// var d = new Date
+// undefined
+// d
+// Tue May 09 2017 18:50:31 GMT+0300 (Eastern Europe Daylight Time)
+// d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()
+// "18:50:31"
+// var end = new Date("11/05/2017 14:00")
+// undefined
+// var diff = end - new Date
+// undefined
+// diff.getHours() + ":" + diff.getMinutes() + ":" + diff.getSeconds()
+// VM6715:1 Uncaught TypeError: diff.getHours is not a function
+// at <anonymous>:1:6
+// (anonymous) @ VM6715:1
+// diff = new Date(diff)
+// Mon Jun 29 1970 23:08:13 GMT+0300 (Eastern Europe Daylight Time)
+// diff.getHours() + ":" + diff.getMinutes() + ":" + diff.getSeconds()
+// "23:8:13"
 

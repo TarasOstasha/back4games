@@ -42,7 +42,11 @@ gulp.task("bower-css", function() {
         	"src/bower/mislider-master/dist/css/mislider-skin-cameo.css",
 			"src/bower/bxslider-4/dist/jquery.bxslider.min.css",
 			"src/bower/animate.css/animate.min.css",
-        	"src/bower/fancybox/dist/jquery.fancybox.min.css"
+        	"src/bower/fancybox/dist/jquery.fancybox.min.css",
+			"src/bower/jquery-listnav/css/listnav.css",
+			"src/bower/jquery-flipster/dist/jquery.flipster.min.css",
+			"src/bower/pintsize-master/dist/pintsize.min.css"
+
 
 		])
 	.pipe(sourcemaps.init()) //ініціалізація кроків
@@ -94,8 +98,13 @@ gulp.task('bower-js', function() {
         "src/bower/bxslider-4/dist/jquery.bxslider.min.js",
         "src/bower/jquery.easing/js/jquery.easing.js",
 		"src/bower/jquery.easing/js/jquery.easing.compatibility.js",
-		"src/bower/slider-top/carouFredSel-jQuery/jquery.carouFredSel-6.2.1-packed.js"
-
+		"src/bower/slider-top/carouFredSel-jQuery/jquery.carouFredSel-6.2.1-packed.js",
+		"src/bower/jquery-listnav/jquery-listnav.min.js",
+		"src/bower/jQuery-Waterwheel-Carousel/js/jquery.waterwheelCarousel.min.js",
+		"src/bower/jquery-flipster/dist/jquery.flipster.min.js",
+        "src/bower/Tabslet/jquery.tabslet.min.js",
+		"src/bower/chart.js/dist/Chart.bundle.min.js",
+		"src/bower/chart.js/dist/Chart.min.js"
 	])
 	.pipe(addSrc.prepend("src/bower/jquery/dist/jquery.js"))
 	.pipe(concat('bower.min.js'))
@@ -106,6 +115,7 @@ gulp.task('bower-js', function() {
 gulp.task('main-js', function() {
 	return gulp.src([
 		"src/scripts/main.js"
+
 	])
 		.pipe(concat('main.min.js'))
 		.pipe(uglify())
