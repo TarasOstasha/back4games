@@ -80,11 +80,27 @@
 .sale-latest {
   position: absolute;
   top: 0;
-  right: 3px;
-  color: #f3f3f3;
-  //font-size: 23px;
-  ont-size: 15px;
-  font-family: 'LatoBold';
+  right: 0px;
+  span {
+    color: #f3f3f3;
+    z-index: 999;
+    font-family: 'LatoBold';
+    position: relative;
+    top: 0;
+    right: 3px;
+    font-size: 15px;
+  }
+
+}
+.sale-latest::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -28px;
+  bottom: -20px;
+  border: 57px solid transparent;
+  border-top: 41px solid @dropdown_hover;
+  border-right: 36px solid @dropdown_hover;
 }
 .offer-containerLatest {
   padding: 0;

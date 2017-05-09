@@ -373,6 +373,7 @@ $(document).ready(function(){
     var myChart = new Chart(ctx, {
         type: 'doughnut',
         options: {
+            cutoutPercentage: 90,
             animation:{
                 animateScale:true
             },
@@ -381,21 +382,23 @@ $(document).ready(function(){
         // responsive: true,
         percentageInnerCutout: 10,
         data: {
-            type: "doughnut",
+            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
             indexLabelPlacement: "outside",
+
             datasets: [{
+                label: '# of Votes',
                 backgroundColor: [
                     "#f3f3f3",
                     "#1c1919"
-
                 ],
                 hoverBackgroundColor: [
                     "#eb5937",
                     "#f3f3f3"
                 ],
-                 data: [85, 15],
+                 data: [80, 20],
                 borderColor: "#1c1919",
-                pointRadius: 10
+                pointRadius: 10,
+                label:['ddsfdsf','dsfdsf']
 
             }]
         }
