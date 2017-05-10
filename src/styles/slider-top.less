@@ -40,7 +40,7 @@
   //width: 435px;
   //background-color: #fff;
   //background-color: rgba(255,255,255, 0.8);
-  padding: 5px 20px;
+  padding: 15px 20px;
   //font-size: 14px;
   //color: #134B94;
   //border: 1px solid #fff;
@@ -106,11 +106,19 @@
   background: @background_headerbottom;
   border-color: transparent;
   text-transform: uppercase;
+  transition: .3s;
   &:focus {
     outline: none;
   }
 }
 .by__now:hover {
-  background: lighten(@background_headerbottom , 5%);
+  background: darken(@orange, 20%);
 }
 
+//slider chart//
+.topslider__chart {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+}

@@ -104,7 +104,8 @@ gulp.task('bower-js', function() {
 		"src/bower/jquery-flipster/dist/jquery.flipster.min.js",
         "src/bower/Tabslet/jquery.tabslet.min.js",
 		"src/bower/chart.js/dist/Chart.bundle.min.js",
-		"src/bower/chart.js/dist/Chart.min.js"
+		"src/bower/chart.js/dist/Chart.min.js",
+		"src/bower/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"
 	])
 	.pipe(addSrc.prepend("src/bower/jquery/dist/jquery.js"))
 	.pipe(concat('bower.min.js'))

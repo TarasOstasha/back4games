@@ -369,41 +369,57 @@ $(document).ready(function(){
 
 
     //**chart**//
-    var ctx = $("#myChart");
-    var myChart = new Chart(ctx, {
-        type: 'doughnut',
-        options: {
-            cutoutPercentage: 90,
-            animation:{
-                animateScale:true
-            },
-            responsive: true
-        },
-        // responsive: true,
-        percentageInnerCutout: 10,
-        data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-            indexLabelPlacement: "outside",
+    // var ctx = $("#myChart");
+    // var myChart = new Chart(ctx, {
+    //     type: 'doughnut',
+    //     options: {
+    //         cutoutPercentage: 90,
+    //         animation:{
+    //             animateScale:true
+    //         },
+    //         responsive: true
+    //     },
+    //     // responsive: true,
+    //     percentageInnerCutout: 10,
+    //     data: {
+    //         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    //         indexLabelPlacement: "outside",
+    //
+    //         datasets: [{
+    //             label: '# of Votes',
+    //             backgroundColor: [
+    //                 "#f3f3f3",
+    //                 "#1c1919"
+    //             ],
+    //             hoverBackgroundColor: [
+    //                 "#eb5937",
+    //                 "#f3f3f3"
+    //             ],
+    //              data: [80, 20],
+    //             borderColor: "#1c1919",
+    //             pointRadius: 10,
+    //             label:['ddsfdsf','dsfdsf']
+    //
+    //         }]
+    //     }
+    // });
+        //chart//
+    $(function () {
+        //create instance
+        $('.chart').easyPieChart({
+            animate: 2000,
+            //rotate: 180,
+            lineWidth: 5,
+            scaleColor: '#1c1919',
+            barColor: '#f3f3f3',
+            trackColor: '#eb5937'
 
-            datasets: [{
-                label: '# of Votes',
-                backgroundColor: [
-                    "#f3f3f3",
-                    "#1c1919"
-                ],
-                hoverBackgroundColor: [
-                    "#eb5937",
-                    "#f3f3f3"
-                ],
-                 data: [80, 20],
-                borderColor: "#1c1919",
-                pointRadius: 10,
-                label:['ddsfdsf','dsfdsf']
-
-            }]
-        }
+        });
+        //update instance after 5 sec
+        setTimeout(function() {
+            $('.chart').data('easyPieChart').update(70);
+        }, 5000);
     });
-
 
 });
 
