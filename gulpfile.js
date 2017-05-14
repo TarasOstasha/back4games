@@ -45,7 +45,9 @@ gulp.task("bower-css", function() {
         	"src/bower/fancybox/dist/jquery.fancybox.min.css",
 			"src/bower/jquery-listnav/css/listnav.css",
 			"src/bower/jquery-flipster/dist/jquery.flipster.min.css",
-			"src/bower/pintsize-master/dist/pintsize.min.css"
+			"src/bower/pintsize-master/dist/pintsize.min.css",
+			"src/bower/ion.rangeSlider/css/ion.rangeSlider.css",
+			"src/bower/ion.rangeSlider/css/normalize.css"
 
 
 		])
@@ -105,7 +107,8 @@ gulp.task('bower-js', function() {
         "src/bower/Tabslet/jquery.tabslet.min.js",
 		"src/bower/chart.js/dist/Chart.bundle.min.js",
 		"src/bower/chart.js/dist/Chart.min.js",
-		"src/bower/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"
+		"src/bower/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js",
+		"src/bower/ion.rangeSlider/js/ion.rangeSlider.min.js"
 	])
 	.pipe(addSrc.prepend("src/bower/jquery/dist/jquery.js"))
 	.pipe(concat('bower.min.js'))

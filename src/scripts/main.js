@@ -118,17 +118,17 @@ $(document).ready(function(){
 
     });
 
-    //**filter list**//
-    // $("#myList").listnav({
-    //     //currently letter start//
-    //     initLetter: 'a',
-    //     //false to show all elements//
-    //     includeAll: false,
-    //     //disabled when no element//
-    //     flagDisabled: true,
-    //     //delete search to number//
-    //     includeNums:false
-    // });
+    // **filter list**//
+    $("#myList").listnav({
+        //currently letter start//
+        initLetter: 'a',
+        //false to show all elements//
+        includeAll: false,
+        //disabled when no element//
+        flagDisabled: true,
+        //delete search to number//
+        includeNums:false
+    });
 
     var data = [
         {
@@ -419,6 +419,22 @@ $(document).ready(function(){
         setTimeout(function() {
             $('.chart').data('easyPieChart').update(70);
         }, 5000);
+    });
+
+
+
+
+
+
+    var $range = $(".js-range-slider");
+    $range.ionRangeSlider({
+        type: "double",
+        grid: true,
+        min: 0,
+        max: 70,
+        from: 0,
+        to: 70,
+        prefix: "$"
     });
 
 });
