@@ -108,7 +108,8 @@ gulp.task('bower-js', function() {
 		"src/bower/chart.js/dist/Chart.bundle.min.js",
 		"src/bower/chart.js/dist/Chart.min.js",
 		"src/bower/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js",
-		"src/bower/ion.rangeSlider/js/ion.rangeSlider.min.js"
+		"src/bower/ion.rangeSlider/js/ion.rangeSlider.min.js",
+		"src/bower/g2a-rating/rating.js"
 	])
 	.pipe(addSrc.prepend("src/bower/jquery/dist/jquery.js"))
 	.pipe(concat('bower.min.js'))

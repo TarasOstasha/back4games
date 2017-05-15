@@ -4,6 +4,7 @@ body {
   box-sizing: border-box;
 }
 ul {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
   li {
@@ -107,7 +108,7 @@ a.back-to-top:hover {
   //align-items: center;
   //ustify-content: space-between;
 }
-.container__top-top {
+.top-line {
   border-bottom: 1px solid #403d3c;
 }
 .usd-section {
@@ -312,6 +313,9 @@ a.back-to-top:hover {
     }
   }
 }
+.form-control {
+  height: auto!important;
+}
 .search {
   //margin-left: 10%;
   display: flex;
@@ -320,6 +324,7 @@ a.back-to-top:hover {
   max-width: 350px;
   input::-moz-placeholder { color: #f3f3f3; }
   input::-webkit-input-placeholder { color: #f3f3f3; }
+  input::-webkit-input-placeholder {font-size: 11px}
   input {
     border-radius: 0;
     background: transparent;

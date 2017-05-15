@@ -93,8 +93,8 @@
     z-index: 999;
     font-family: 'LatoBold';
     position: relative;
-    top: 0;
-    right: 3px;
+    top: 5px;
+    right: 5px;
     font-size: 19px;
   }
 
@@ -103,7 +103,7 @@
   content: "";
   position: absolute;
   top: 0;
-  left: -28px;
+  left: -50px;
   bottom: -20px;
   border: 57px solid transparent;
   border-top: 41px solid @dropdown_hover;
@@ -148,7 +148,7 @@
   background: @orange;
   border: none;
   width: 100%;
-  padding: 22px 0;
+  padding: 12px 0;
   margin: 30px 0 72px;
   font-family: 'LatoBold';
   font-size: 20px;
@@ -162,6 +162,26 @@
     background: darken(@orange, 20%);
   }
 }
-
+.rating-account {
+  margin: 0 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .rating {
+    background: @darkbg!important;
+    color: #f3f3f3!important;
+  }
+  .information {
+    color: transparent!important;
+    position: relative!important;
+  }
+  .information-rating {
+    position: relative;
+    top: -32px;
+    left: -148px;
+    padding: 0!important;
+    color: @orange!important;
+  }
+}
 
 
