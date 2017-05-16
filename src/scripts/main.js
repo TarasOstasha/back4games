@@ -130,6 +130,8 @@ $(document).ready(function(){
         includeNums:false
     });
 
+    $('.ln-letters').addClass('container');
+
     var data = [
         {
             title: "RainbowSix: Siege",
