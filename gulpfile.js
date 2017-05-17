@@ -81,7 +81,8 @@ gulp.task('bower-js', function() {
 		"src/bower/bootstrap/dist/js/bootstrap.js",
         "src/bower/jquery.easing/js/jquery.easing.js",
 		"src/bower/jquery.easing/js/jquery.easing.compatibility.js",
-		"src/bower/slider-top/carouFredSel-jQuery/jquery.carouFredSel-6.2.1-packed.js",
+
+		"src/bower/gilbitron/carouFredSel/jquery.carouFredSel-6.2.1-packed.js",
 		"src/bower/jQuery-Waterwheel-Carousel/js/jquery.waterwheelCarousel.min.js",
 		"src/bower/jquery-flipster/dist/jquery.flipster.min.js",
         "src/bower/Tabslet/jquery.tabslet.min.js",

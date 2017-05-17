@@ -19,9 +19,9 @@
     "bootstrap": "^3.3.7",
     "toastr": "^2.1.2",
     "components-font-awesome": "^4.7.0",
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
   },
   "devDependencies": {
-    
+    "gilbitron/carouFredSel":"6.2.1"
   }
 }
