@@ -118,19 +118,9 @@ $(document).ready(function(){
 
     });
 
-    // **filter list**//
-    $("#myList").listnav({
-        //currently letter start//
-        initLetter: 'a',
-        //false to show all elements//
-        includeAll: false,
-        //disabled when no element//
-        flagDisabled: true,
-        //delete search to number//
-        includeNums:false
-    });
 
-    $('.ln-letters').addClass('container');
+
+
 
     var data = [
         {
@@ -370,41 +360,6 @@ $(document).ready(function(){
     });
 
 
-    //**chart**//
-    // var ctx = $("#myChart");
-    // var myChart = new Chart(ctx, {
-    //     type: 'doughnut',
-    //     options: {
-    //         cutoutPercentage: 90,
-    //         animation:{
-    //             animateScale:true
-    //         },
-    //         responsive: true
-    //     },
-    //     // responsive: true,
-    //     percentageInnerCutout: 10,
-    //     data: {
-    //         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-    //         indexLabelPlacement: "outside",
-    //
-    //         datasets: [{
-    //             label: '# of Votes',
-    //             backgroundColor: [
-    //                 "#f3f3f3",
-    //                 "#1c1919"
-    //             ],
-    //             hoverBackgroundColor: [
-    //                 "#eb5937",
-    //                 "#f3f3f3"
-    //             ],
-    //              data: [80, 20],
-    //             borderColor: "#1c1919",
-    //             pointRadius: 10,
-    //             label:['ddsfdsf','dsfdsf']
-    //
-    //         }]
-    //     }
-    // });
         //chart//
     $(function () {
         //create instance
@@ -422,10 +377,6 @@ $(document).ready(function(){
             $('.chart').data('easyPieChart').update(70);
         }, 5000);
     });
-
-
-
-
 
 
     var $range = $(".js-range-slider");

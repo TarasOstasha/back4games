@@ -29,21 +29,11 @@ gulp.task("less", function() {
 gulp.task("bower-css", function() {
 	return gulp.src([
 			"src/bower/bootstrap/dist/css/bootstrap.css",
-			"src/bower/toastr/toastr.min.css",
+
 			"src/bower/components-font-awesome/css/font-awesome.min.css",
-			"src/bower/jparallax/css/jquery.parallax.css",
-			"src/bower/jparallax/css/base.css",
-			"src/bower/slick-carousel/slick/slick-theme.css",
-        	"src/bower/slick-carousel/slick/slick.css",
-       		"src/bower/pwstabs/assets/jquery.pwstabs.css",
-			"src/bower/mislider-master/dist/css/mislider.css",
-        	"src/bower/mislider-master/dist/css/mislider-cameo.css",
-		 	"src/bower/mislider-master/dist/css/mislider-skin-cameo.css",
-        	"src/bower/mislider-master/dist/css/mislider-skin-cameo.css",
-			"src/bower/bxslider-4/dist/jquery.bxslider.min.css",
+
 			"src/bower/animate.css/animate.min.css",
-        	"src/bower/fancybox/dist/jquery.fancybox.min.css",
-			"src/bower/jquery-listnav/css/listnav.css",
+
 			"src/bower/jquery-flipster/dist/jquery.flipster.min.css",
 			"src/bower/pintsize-master/dist/pintsize.min.css",
 			"src/bower/ion.rangeSlider/css/ion.rangeSlider.css",
@@ -88,25 +78,13 @@ gulp.task("html", function() {
 
 gulp.task('bower-js', function() {
 	return gulp.src([
-        "src/bower/slideout.js/dist/slideout.min.js",
-        "src/bower/fancybox/dist/jquery.fancybox.min.js",
-        "src/bower/jparallax/js/jquery.parallax.js",
 		"src/bower/bootstrap/dist/js/bootstrap.js",
-		"src/bower/toastr/toastr.js",
-        "node_modules/parallax-js/deploy/parallax.min.js",
-		"src/bower/slick-carousel/slick/slick.min.js",
-		"src/bower/pwstabs/assets/jquery.pwstabs.min.js",
-		"src/bower/mislider-master/dist/js/mislider.min.js",
-        "src/bower/bxslider-4/dist/jquery.bxslider.min.js",
         "src/bower/jquery.easing/js/jquery.easing.js",
 		"src/bower/jquery.easing/js/jquery.easing.compatibility.js",
 		"src/bower/slider-top/carouFredSel-jQuery/jquery.carouFredSel-6.2.1-packed.js",
-		"src/bower/jquery-listnav/jquery-listnav.min.js",
 		"src/bower/jQuery-Waterwheel-Carousel/js/jquery.waterwheelCarousel.min.js",
 		"src/bower/jquery-flipster/dist/jquery.flipster.min.js",
         "src/bower/Tabslet/jquery.tabslet.min.js",
-		"src/bower/chart.js/dist/Chart.bundle.min.js",
-		"src/bower/chart.js/dist/Chart.min.js",
 		"src/bower/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js",
 		"src/bower/ion.rangeSlider/js/ion.rangeSlider.min.js",
 		"src/bower/g2a-rating/rating.js"
